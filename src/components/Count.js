@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Count(){
+function Count({count}){
     return(
         <div>
-            <span>Count:</span> 000
+            <span>Count:</span>{count}
         </div>
     )
 }
