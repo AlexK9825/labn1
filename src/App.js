@@ -2,22 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import Count from './components/Count'
 import React, {useState} from 'react'
-import {Button} from "antd";
+import { Button } from 'antd';
 import 'antd/dist/antd.css'
- 
+
 function App() {
 
   let [count, setCount] = useState(0)
 
+
+  console.log(count)
   return(
     <>
-       <Count count = {count}/>
-       <Button type="primary" onClick={ () => setCount(++count)} danger>
+       <Count count={count}/>
+       <Button type="primary" onClick={()=>setCount(++count)} danger>
          UP
        </Button>
        <br />
        <br />
-       <Button type="primary" onClick={ () => setCount(--count)} danger>
+       <Button type="primary" onClick={()=>setCount(++count)} danger>
          DOWN
        </Button>
     </>
