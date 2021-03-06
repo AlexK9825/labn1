@@ -9,7 +9,6 @@ function App() {
 
   let [count, setCount] = useState(0)
 
-
   console.log(count)
   return(
     <>
@@ -27,3 +26,4 @@ function App() {
 }
 
 export default App;
+
