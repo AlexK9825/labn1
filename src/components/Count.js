@@ -3,7 +3,7 @@ import React from 'react'
 function Count({count}){
     return(
         <div>
-            <span>Count:</span>{count}
+            <span>Count:</span>{count}   
         </div>
     )
 }
