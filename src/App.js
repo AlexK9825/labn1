@@ -9,10 +9,6 @@ function App() {
 
   let [count, setCount] = useState(0)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 87a09889eaee12a8210f0190bacf984df2492eff
   console.log(count)
   return(
     <>
