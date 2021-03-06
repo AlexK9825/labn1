@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Count from './components/Count'
 import React, {useState} from 'react'
+import { Button } from 'antd';
+import 'antd/dist/antd.css'
 
 function App() {
 
@@ -11,10 +13,17 @@ function App() {
   return(
     <>
        <Count count={count}/>
-       <div className='buttonRed' onClick={()=>setCount(++count)}>UP</div>
-       <div className='buttonBlue' onClick={()=>setCount(--count)}>DOWN</div>
+       <Button type="primary" onClick={()=>setCount(++count)} danger>
+         UP
+       </Button>
+       <br />
+       <br />
+       <Button type="primary" onClick={()=>setCount(++count)} danger>
+         DOWN
+       </Button>
     </>
   );
 }
 
 export default App;
+
