@@ -18,6 +18,7 @@ function App() {
          UP
        </Button>
        <br />
+       <br />
        <Button type="primary" onClick={()=>setCount(++count)} danger>
          DOWN
        </Button>
