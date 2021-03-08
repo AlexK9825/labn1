@@ -1,28 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import Count from './components/Count'
 import React, {useState} from 'react'
 import { Button } from 'antd';
 import 'antd/dist/antd.css'
+import Layout from 'antd/lib/layout/layout';
+import { MenuLayout } from './Layouts/Menu/MenuLayout'
+import { HeaderLayout } from './Layouts/Menu/HeaderLayout/HeaderLayout';
+import { ContentLayout } from './Layouts/Menu/ContentLayout/ContentLayout';
+import { FooterLayout } from './Layouts/FooterLayout/FooterLayout';
 
 function App() {
 
-  let [count, setCount] = useState(0)
-
-
-  console.log(count)
   return(
     <>
-       <Count count={count}/>
-       <Button type="primary" onClick={()=>setCount(++count)} danger>
-         UP
-       </Button>
-       <br />
-       <Button type="primary" onClick={()=>setCount(++count)} danger>
-         DOWN
-       </Button>
+       <Layout>
+          <MenuLayout />
+          <HeaderLayout />
+          <ContentLayout />
+          <FooterLayout />
+       </Layout>
     </>
   );
 }
 
 export default App;
+
