@@ -12,7 +12,7 @@ import {
   } from '@ant-design/icons';
 import { MenuRoot } from "../helpers/constants"
 
-const { Sider } = Layout
+const { Sider } =  Layout
 
 export const MenuLayout = () => {
 
