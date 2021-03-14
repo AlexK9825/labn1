@@ -12,6 +12,8 @@ import {
   } from '@ant-design/icons';
 import { MenuRoot } from "../helpers/constants"
 
+import './menustyle.css'
+
 const { Sider } =  Layout
 
 export const MenuLayout = () => {
@@ -26,7 +28,7 @@ export const MenuLayout = () => {
         }}
       >
         <div className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+        <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
           {
             MenuRoot.map((menu, index) => {
             return(
