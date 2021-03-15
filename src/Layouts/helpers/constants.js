@@ -6,7 +6,7 @@ import { QuestionOutlined } from "@ant-design/icons";
 export const MenuRoot = [
     {
         id: 0,
-        name: "Домашняя страница",
+        name:  "Домашняя страница",
         icon: <UserOutlined/>,
         path: '/'
     },
