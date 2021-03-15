@@ -9,13 +9,12 @@ export const HeaderLayout = () => {
     return(
         <Layout>
         <Header className="header">
-      <div className="site-layout-background" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} 
-      title="Daily News">
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
+      <Menu theme="dark" mode="horizontal"/>
+      <div className="site-layout-background" 
+      style={{ padding: 0, textAlign: 'center', color: 'white',
+       fontSize: '32px' }}>
+        Daily News
+        </div>
     </Header>
     </Layout>
     )

@@ -10,7 +10,7 @@ import {
     UploadOutlined,
     VideoCameraOutlined,
   } from '@ant-design/icons';
-import { MenuRoot } from "../helpers/constants"
+import { MenuRoot } from "../../helpers/constants"
 
 import './menustyle.css'
 
@@ -21,6 +21,7 @@ export const MenuLayout = () => {
     return(
         <Sider
         style={{
+          color: 'black',
           overflow: 'auto',
           height: '100vh',
           position: 'fixed',
