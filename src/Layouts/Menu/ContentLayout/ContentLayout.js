@@ -4,7 +4,7 @@ import { contentMock } from "../../../components/moc/content";
 import { ContentStory } from '../../../components/ContentStory/ContentStory';
 import { getStateByKey } from "d:/curs3/TW/labs/labn1/labn1/src/helpers/functions";
 
-import './style.css'
+import './style.css';
 
 
 const { Content } = Layout
