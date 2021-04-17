@@ -1,18 +1,15 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
 import {
-    AppstoreOutlined,
-    BarChartOutlined,
-    CloudOutlined,
-    ShopOutlined,
-    TeamOutlined,
-    UserOutlined,
-    UploadOutlined,
-    VideoCameraOutlined,
-  } from '@ant-design/icons';
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import { MenuRoot } from "../../helpers/constants"
 
 import './menustyle.css'
+
 
 const { Sider } =  Layout
 
@@ -31,10 +28,10 @@ export const MenuLayout = () => {
         <div className="logo" />
         <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
           {
-            MenuRoot.map((menu, index) => {
+            MenuRoot.map((menu) => {
             return(
               <Menu.Item key={menu.id} icon= {menu.icon}>
-                {menu.name}
+                <Link to={ menu.path }>{ menu.name }</Link>
               </Menu.Item>
             )
           })}
