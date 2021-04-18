@@ -50,9 +50,7 @@ function App() {
             </Switch>
           </Layout>
           <FooterLayout />
-        </Layout>
-
-        
+        </Layout>       
 
       </Router>
     </>
