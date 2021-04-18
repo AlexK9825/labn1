@@ -18,6 +18,8 @@ import {
   Link
 } from "react-router-dom";
 import { NoContent } from './components/NoContent';
+import Home from './components/form/form'
+import SelectGroup from './components/select/select'
 
 function App() {
 
@@ -34,13 +36,13 @@ function App() {
           <Layout className="site-layout" style={{marginLeft: 200}}>
               <Switch>
               <Route exact path={HOME_PATH}>
-                 <NoContent />
+                 {<Home />}
               </Route>
               <Route exact path={NEWS_PATH}>
                  {<ContentLayout />}
               </Route>
               <Route exact path={COMMUNITY_PATH}>
-                 <NoContent />
+                 <SelectGroup />
               </Route>
               <Route exact path={SUPPORT_PATH}>
                  <NoContent />
