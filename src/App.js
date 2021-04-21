@@ -20,12 +20,17 @@ import {
 import { NoContent } from './components/NoContent';
 import Home from './components/form/form'
 import SelectGroup from './components/select/select'
+import { contentMock } from "d:/curs3/TW/labs/labn1/labn1/src/components/moc/content";
 
 function App() {
 
-  useEffect(() =>{
-      SetInitialStateToLocalStorage()
-  }, [])
+  const [ initialState, setInitialState ] = useState(contentMock)
+
+    //
+    // useEffect(() => {
+    //     setInitialStateToLocalStorage()
+    // }, [])
+    console.log('>>initialState', initialState)
 
   return(
     <>
@@ -39,7 +44,7 @@ function App() {
                  {<Home />}
               </Route>
               <Route exact path={NEWS_PATH}>
-                 {<ContentLayout />}
+                 {<ContentLayout initialState={ initialState } setInitialState={ setInitialState }/>}
               </Route>
               <Route exact path={COMMUNITY_PATH}>
                  <SelectGroup />

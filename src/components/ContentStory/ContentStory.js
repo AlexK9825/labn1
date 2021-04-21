@@ -1,16 +1,29 @@
-import React from 'react'
-import { Card } from 'antd'
+import React, { useState, useEffect } from 'react'
+import { Card, message } from 'antd'
+import { removeCard } from "../../helpers/functions";
 
 const { Meta } = Card;
 
-export const ContentStory = ({img, title, description, index}) => {
+export const ContentStory = ({ img, title, description, index, setInitialState, initialState }) => {
+
+  const [ removeElement, setRemoveElement ] = useState([])
+
+  useEffect(() => {
+      if (!!removeElement.length) {
+          message.success(removeElement.title);
+      }
+  })
 
     return(
         <Card
     hoverable
     style={{ width: 240, margin: '20px' }}
     cover={<img alt="example" src={ img } />}
-    onClick={(param)=> console.log('>>clicked', param)}
+    onClick={ () => {
+      const [ removed, state ] = removeCard(initialState, index)
+      setRemoveElement(removed)
+      setInitialState([ ...state ])
+  } }
   >
     <Meta title={title} description={description} />
   </Card>

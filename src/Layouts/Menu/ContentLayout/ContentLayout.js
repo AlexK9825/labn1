@@ -6,32 +6,33 @@ import { getStateByKey } from "d:/curs3/TW/labs/labn1/labn1/src/helpers/function
 
 import './style.css';
 
-
 const { Content } = Layout
 
-export const ContentLayout = () => {
+export const ContentLayout = ({ initialState, setInitialState }) => {
       
-    const[content, setContent] = useState([])
+    // const [ content, setContent ] = useState(getInitialState())
 
-    useEffect(() => {
-        setContent(getStateByKey('initialState'))
-    }, [])
+     // useEffect(() => {
+    //     setContent(getStateByKey('initialState'))
+    // }, [])
 
     return(
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-        <div className="site-layout-background content" style={{ padding: 100,
-              textAlign: 'center'}}>
-                  {!content.length ? (
-                      <div>No Content</div>
-                  ) : (
-           content.map(({description, img, title}, index) => {
+         <Content>
+            <div className="content" style={ { padding: 24, textAlign: 'center' } }>
+                { !initialState.length ? (
+                    <div>No Content</div>
+                ) : (
+                initialState.map(({ description, img, title }, index) => {
               return (
-              <ContentStory key={index} description={description} title={title} 
-              img={img}/>
-              )
-              }) ) }
-        </div>
-      </Content>
+              <ContentStory initialState={ initialState } setInitialState={ setInitialState }
+                                          key={ index } description={ description }
+                                          title={ title } img={ img }
+                                          index={ index }/>
+                        )
+                    })
+                ) }
+            </div>
+        </Content>
     )
 }
 
